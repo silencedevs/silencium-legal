@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171719">
+  <meta name="description" content="Terms for using Silencium, including permitted use, usage credits, access and service availability.">
+  <title>Terms of Service — Silencium</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header><a class="brand" href="index.html">Silencium</a><nav aria-label="Main navigation"><a href="index.html">Overview</a><a href="privacy.html">Privacy</a><a href="terms.html" aria-current="page">Terms</a></nav></header>
+  <main id="main" tabindex="-1">
+    <div class="document-head"><p class="eyebrow">Legal</p><h1>Terms of Service</h1><p class="lead">The terms for accessing and using Silencium on Discord.</p><p class="metadata" data-todo="DATES">TODO[DATES]: Insert the effective date and last-updated date after approval.</p></div>
+    <aside class="draft" aria-label="Document status"><strong>Draft — not yet effective.</strong><p>Complete the operator details, commercial terms and legal review marked TODO before publication.</p></aside>
+    <div class="legal-layout">
+      <aside class="contents"><h2>On this page</h2><ol>
+        <li><a href="#agreement">Agreement and operator</a></li><li><a href="#use">Permitted use</a></li><li><a href="#abuse">Prohibited activities</a></li><li><a href="#discord">Discord’s terms</a></li><li><a href="#credits">Usage tokens</a></li><li><a href="#files">Your files</a></li><li><a href="#availability">Availability and changes</a></li><li><a href="#access">Access restrictions</a></li><li><a href="#liability">Responsibility and liability</a></li><li><a href="#updates">Updates and contact</a></li>
+      </ol></aside>
+      <article aria-label="Terms of Service">
+        <section id="agreement"><h2>1. Agreement and operator</h2>
+          <p>These terms govern use of Silencium, a Discord bot associated with Silence. Once finalized and effective, they form an agreement between the identified operator and the user. Read them before using the service. If you do not agree, do not use it.</p>
+          <p class="todo" data-todo="OPERATOR"><strong>TODO[OPERATOR]:</strong> Identify the operator’s legal name and required address, and clarify the relationship with Silence. Use the same information as the Privacy Policy.</p>
+          <p>You must be eligible to use Discord and meet applicable legal requirements. Where guardian authorization is required, obtain it before use.</p>
+          <p class="todo" data-todo="CHILDREN"><strong>TODO[CHILDREN]:</strong> Confirm the intended audience, any additional age requirement and the appropriate guardian-authorization process.</p>
+        </section>
+        <section id="use"><h2>2. Permitted use</h2>
+          <p>You may use Silencium to process Luau code that you own or are authorized to submit and modify. Use the bot’s commands and available features within your account’s access and usage limits.</p>
+          <p>Obfuscation can make code harder to inspect; it does not make code uninspectable or guarantee protection against copying, modification or reverse engineering. Test output in your intended environment before relying on it. Supported syntax and runtime behavior are subject to the compiler’s actual capabilities.</p>
+        </section>
+        <section id="abuse"><h2>3. Prohibited activities</h2>
+          <p>Do not use Silencium to:</p>
+          <ul>
+            <li>Break applicable law, infringe intellectual-property rights, or submit code or personal information without the necessary authorization.</li>
+            <li>Facilitate malware, credential theft, fraud, unauthorized access, harassment, or other harmful activity.</li>
+            <li>Disrupt the bot or its infrastructure, overload build slots, evade access restrictions, manipulate usage credits, or access another user’s data.</li>
+            <li>Misrepresent the service or use it in violation of applicable Discord rules.</li>
+          </ul>
+          <p>If you discover a security issue, report it through the contact below. Do not access other users’ data or cause disruption to demonstrate an issue.</p>
+        </section>
+        <section id="discord"><h2>4. Discord’s terms</h2>
+          <p>Your use of Discord remains subject to <a href="https://discord.com/terms" rel="noreferrer">Discord’s Terms of Service</a> and <a href="https://discord.com/guidelines" rel="noreferrer">Community Guidelines</a>. Silencium’s terms do not replace them. Discord is a separate service; Silencium is not presented as an official Discord product or as endorsed by Discord.</p>
+        </section>
+        <section id="credits"><h2>5. Usage tokens and limits</h2>
+          <p>Bot access depends on account status, available usage tokens, and configured limits. In the current implementation, new accounts start with zero tokens and only the operator can grant them through the local administration interface. Users cannot grant tokens through Discord commands.</p>
+          <p>A build reserves its configured token cost before downloading and compiling the file. Successful returned output consumes that reservation. Known download, compilation and delivery failures refund held tokens. Interrupted or uncertain deliveries can require operator review; delivery and the local database cannot be committed as one operation.</p>
+          <p>Per-file cost, daily allowance and input-size limits can vary by account. <code>/config</code> shows the current settings and usage. Policy changes apply to new builds; a build already admitted retains its original cost and settings.</p>
+          <p class="todo" data-todo="CREDITS"><strong>TODO[CREDITS]:</strong> Confirm whether tokens are free, purchased or otherwise supplied. If payment or a separate commercial arrangement exists, provide its pricing, validity, refund/cancellation and applicable consumer-rights terms before accepting payment. Do not infer a token-expiry or cash-value rule from the software.</p>
+        </section>
+        <section id="files"><h2>6. Your files and privacy</h2>
+          <p>Submitting a file does not by itself transfer ownership of your code to the operator. You authorize the processing needed to compile the requested file and return the result through Discord. No broader license for publishing, selling or training on your code is granted by this clause.</p>
+          <p>Remove passwords, credentials and unnecessary personal information before submitting files. Original and generated attachments pass through Discord; private replies are not a guarantee of confidential storage or deletion.</p>
+          <p>The <a href="privacy.html">Privacy Policy</a> explains the reviewed data handling and identifies details requiring operator confirmation. Acceptance of these terms does not itself provide consent for every data-processing purpose.</p>
+        </section>
+        <section id="availability"><h2>7. Availability and service changes</h2>
+          <p>Maintenance, capacity limits, technical failures, security issues and changes to Discord can interrupt the service. No specific uptime or completion-time commitment is made here. Features may be changed or discontinued, subject to applicable law and any separate commitments made to you.</p>
+          <p>Where a change materially affects an agreed paid service or your existing rights, any required notice, remedy or refund must be handled under the applicable agreement and law.</p>
+        </section>
+        <section id="access"><h2>8. Restriction or termination of access</h2>
+          <p>Access may be restricted to address abuse, a breach of these terms, security risks, legal requirements or service capacity. Where appropriate and lawful, the operator should explain the restriction and provide a contact for review. Urgent security or legal circumstances can require action without advance notice.</p>
+          <p>You may stop using the bot at any time. Stopping use or removing the bot does not itself delete account records; use the privacy contact to request deletion. Restrictions do not remove any mandatory rights concerning paid services, refunds or personal data.</p>
+        </section>
+        <section id="liability"><h2>9. Responsibility and liability</h2>
+          <p>Each party remains responsible for its obligations under applicable law. Nothing in these terms excludes or limits liability or remedies that cannot lawfully be excluded or limited, including applicable consumer rights.</p>
+          <p>Any exclusion, financial cap or distinction between categories of loss must be assessed under the law that applies to the operator and user. This draft does not impose a blanket exclusion of all liability or an arbitrary monetary cap.</p>
+          <p class="todo" data-todo="LAW_REVIEW"><strong>TODO[LAW_REVIEW]:</strong> Review this section for the operator’s jurisdiction, service model and consumer users. Add any appropriate governing-law or dispute terms without taking away mandatory protections or imposing an unsupported forum requirement.</p>
+        </section>
+        <section id="updates"><h2>10. Updates and contact</h2>
+          <p>Revisions will be published here with an updated date. Material changes require appropriate notice and a lawful process for taking effect. Changes do not automatically remove rights already accrued or override mandatory law.</p>
+          <p class="todo" data-todo="CHANGES"><strong>TODO[CHANGES]:</strong> Specify the notice method and effective-date process for material changes, including any required acceptance or cancellation options.</p>
+          <p class="todo" data-todo="CONTACT"><strong>TODO[CONTACT]:</strong> Add a working support and legal contact, including how to ask about access restrictions or interrupted token reservations.</p>
+        </section>
+      </article>
+    </div>
+  </main>
+  <footer><p>Silencium · Legal</p><nav aria-label="Footer navigation"><a href="privacy.html">Privacy Policy</a><a href="terms.html" aria-current="page">Terms of Service</a></nav></footer>
+</body>
+</html>
