@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171719">
+  <meta name="description" content="How Silencium processes Discord identifiers, uploaded files, account settings and usage records.">
+  <title>Privacy Policy — Silencium</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header><a class="brand" href="index.html">Silencium</a><nav aria-label="Main navigation"><a href="index.html">Overview</a><a href="privacy.html" aria-current="page">Privacy</a><a href="terms.html">Terms</a></nav></header>
+  <main id="main" tabindex="-1">
+    <div class="document-head"><p class="eyebrow">Legal</p><h1>Privacy Policy</h1><p class="lead">Information processed when you use Silencium and visit this legal website.</p><p class="metadata" data-todo="DATES">TODO[DATES]: Insert the effective date and last-updated date after approval.</p></div>
+    <aside class="draft" aria-label="Document status"><strong>Draft — not yet effective.</strong><p>Implementation details below must be checked against the deployed service. Complete every TODO before publication.</p></aside>
+    <div class="legal-layout">
+      <aside class="contents"><h2>On this page</h2><ol>
+        <li><a href="#operator">Operator and scope</a></li><li><a href="#information">Information processed</a></li><li><a href="#purposes">Why it is processed</a></li><li><a href="#storage">Storage and retention</a></li><li><a href="#services">Other services</a></li><li><a href="#security">Security</a></li><li><a href="#rights">Your rights</a></li><li><a href="#children">Children</a></li><li><a href="#changes">Changes and contact</a></li>
+      </ol></aside>
+      <article aria-label="Privacy Policy">
+        <section id="operator"><h2>1. Operator and scope</h2>
+          <p>Silencium is a Discord bot associated with the Silence project. This policy covers the bot’s account and file-processing functions, and this static legal website. The association with Silence does not by itself identify the party responsible for processing personal data.</p>
+          <p class="todo" data-todo="OPERATOR"><strong>TODO[OPERATOR]:</strong> Identify the operator and data controller by legal name, with the required contact or service address. Clarify whether Silence has any separate role in processing.</p>
+          <p class="todo" data-todo="CONTACT"><strong>TODO[CONTACT]:</strong> Provide a working privacy and support contact, plus a data protection officer or representative contact if applicable.</p>
+        </section>
+        <section id="information"><h2>2. Information processed</h2>
+          <p>The following describes the reviewed bot implementation. Actual hosting and operational practices still need confirmation.</p>
+          <ul>
+            <li><strong>Account identifiers:</strong> your Discord user ID and a Discord account name, or a name entered by the operator. An account can be added manually by the operator or created through bot use.</li>
+            <li><strong>Settings and access:</strong> saved build configuration, token balance, per-file token cost, access status, daily build limit, input-size limit, account creation time, and internal record versions.</li>
+            <li><strong>Build and credit history:</strong> interaction/request IDs, account links, timestamps, UTC usage-day values, input and output byte counts, reserved/delivered/refunded status, token adjustments and reasons, and administrative request identifiers and fingerprints.</li>
+            <li><strong>Files:</strong> the submitted filename, attachment URL and size, file contents needed for compilation, and the generated output. These are processed separately from the account database as described below.</li>
+            <li><strong>Discord context:</strong> Discord can include guild/server IDs, channel IDs, user/member details and permissions in an interaction. The bot handles this context to respond. The reviewed account database does not have fields for guild or channel IDs. An optional server ID may be configured by the operator for command registration.</li>
+          </ul>
+          <p>The bot responds to slash commands; the reviewed implementation does not enable Discord’s Message Content intent or scan ordinary channel conversations. It contains no advertising, analytics or AI-service integration. This does not describe processing independently performed by Discord.</p>
+          <p>This website has no scripts, forms, analytics, external fonts, cookies or browser-storage features in its supplied code. GitHub’s hosting infrastructure can process technical request data; see section 5.</p>
+          <p class="todo" data-todo="OPERATIONS"><strong>TODO[OPERATIONS]:</strong> Confirm deployed versions, support communications, infrastructure logs, monitoring and any additional processing or integrations. Update this policy if they differ from the reviewed implementation.</p>
+        </section>
+        <section id="purposes"><h2>3. Why it is processed</h2>
+          <p>Identifiers associate commands, settings and usage tokens with the correct account. Configuration determines how files are compiled. Usage records enforce access and size limits, reserve or refund tokens, prevent duplicate charges, and let the operator review interrupted builds and account changes. Files are processed to generate and return the requested output.</p>
+          <p>You need a Discord user ID for an account and file contents for a build. Without that information, those functions cannot be provided. You do not need to submit a file merely to read these legal documents.</p>
+          <p class="todo" data-todo="BASIS"><strong>TODO[BASIS]:</strong> Where GDPR applies, identify the Article 6 legal basis for each purpose, and any legitimate interests relied on. Do not assume that using the bot constitutes consent to all processing.</p>
+          <p>Token and usage limits are enforced automatically. The reviewed code does not build advertising profiles.</p>
+          <p class="todo" data-todo="OPERATIONS"><strong>TODO[OPERATIONS]:</strong> Confirm whether deployed automated decisions or profiling require additional information, including any applicable Article 22 safeguards.</p>
+        </section>
+        <section id="storage"><h2>4. Storage, retention and deletion</h2>
+          <h3>Account records</h3>
+          <p>Account, configuration, build-metadata and credit-history records are stored in an operator-controlled SQLite database. Submitted source, generated artifacts, attachment URLs and credentials are not stored in that database. Showing only recent records in the admin interface does not delete older records.</p>
+          <p>The current code has no automatic expiry for account, build or credit records, and no self-service account-deletion command. Resetting <code>/config</code> resets build settings; it does not delete your account or history. Removing the bot from a server does not automatically erase those records.</p>
+          <p class="todo" data-todo="RETENTION"><strong>TODO[RETENTION]:</strong> Specify and implement retention periods or criteria for each data category, interrupted jobs, administrative records, support data and backups. Explain any legally required exceptions; do not publish a period that is not enforced.</p>
+          <h3>Source and output files</h3>
+          <p>Attachments are downloaded from Discord. File contents and output are handled in memory, and compilation uses a private temporary directory. That directory is normally removed when compilation finishes or fails. A hard crash, operating-system storage, swap or backups may leave copies; cleanup is not guaranteed secure erasure.</p>
+          <p>Generated files are returned through private Discord interaction replies. “Private” describes the reply’s visibility, not a guarantee about Discord’s storage, retention or deletion. Original uploads and returned attachments remain subject to Discord’s systems and policies.</p>
+          <p class="todo" data-todo="DELETION"><strong>TODO[DELETION]:</strong> Document the request channel, identity checks, account/history deletion procedure, handling of temporary-file remnants and backups, and any limitations on removing copies held by Discord. Implement the operational process before making deletion commitments.</p>
+        </section>
+        <section id="services"><h2>5. Third parties and hosting</h2>
+          <ul>
+            <li><strong>Discord:</strong> supplies command interactions and attachments, and receives the bot’s replies and output files. Its own processing is described in the <a href="https://discord.com/privacy" rel="noreferrer">Discord Privacy Policy</a>.</li>
+            <li><strong>GitHub Pages:</strong> hosts these static legal documents. GitHub can process technical information such as IP addresses and request information to deliver and protect its services. See the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noreferrer">GitHub Privacy Statement</a>. Visiting this site does not send your bot database or submitted scripts to GitHub through the supplied site code.</li>
+            <li><strong>Service operation:</strong> the operator’s administration interface can access account, configuration, usage and credit records. Any other people or providers with access must be identified below.</li>
+          </ul>
+          <p class="todo" data-todo="HOSTING"><strong>TODO[HOSTING]:</strong> Name the bot host and any other recipients or processors, their roles, access arrangements, and relevant storage/processing locations. Confirm whether support, backup or monitoring providers are used.</p>
+          <p class="todo" data-todo="TRANSFERS"><strong>TODO[TRANSFERS]:</strong> Identify relevant international transfers and the applicable safeguards or other lawful transfer arrangements, with a way to obtain information about them. Do not claim EU-only storage without verification.</p>
+        </section>
+        <section id="security"><h2>6. Security measures</h2>
+          <p>The reviewed implementation uses restricted local database/file permissions, parameterized database queries, bounded downloads and compilation, and an administration server bound to the local machine with origin and request-token checks. Bot replies are private. Application messages do not include source contents; SDK warnings are reduced to fixed messages without formatting request payloads or credential-bearing URLs.</p>
+          <p>These controls do not guarantee confidentiality, perfect security or secure erasure. The reviewed SQLite database is not application-encrypted at rest. Deployment access, disk encryption, backups and infrastructure logging need separate verification. Do not submit credentials or personal information that is unnecessary for your build.</p>
+        </section>
+        <section id="rights"><h2>7. Your rights, including in the EU</h2>
+          <p>Where applicable law provides these rights, you may request access, correction, erasure, restriction or portability, and object to certain processing. If processing relies on consent, you may withdraw it without affecting earlier lawful processing. Rights depend on the circumstances and applicable exceptions.</p>
+          <p>If GDPR applies, you may complain to a competent data protection supervisory authority, including one in your habitual residence, workplace or the place of an alleged infringement. See the <a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng/" rel="noreferrer">GDPR text</a>.</p>
+          <p>Use the contact in section 1 to make a request. Provide your Discord user ID to help locate your records; do not send passwords or bot credentials. The operator must establish a proportionate verification and response process.</p>
+        </section>
+        <section id="children"><h2>8. Children and eligibility</h2>
+          <p>Users must meet Discord’s applicable age requirements. That alone does not settle the operator’s obligations when processing children’s data.</p>
+          <p class="todo" data-todo="CHILDREN"><strong>TODO[CHILDREN]:</strong> Confirm the intended audience, any additional age restriction, and the appropriate procedure where children’s data, guardian authorization or local requirements apply.</p>
+        </section>
+        <section id="changes"><h2>9. Changes and contact</h2>
+          <p>Updates to this policy will be published on this page with a revised date. Material changes require an appropriate notice process where applicable law requires it.</p>
+          <p class="todo" data-todo="CHANGES"><strong>TODO[CHANGES]:</strong> Specify how users will receive important notices and when an updated policy takes effect.</p>
+          <p>For privacy requests and questions, use the confirmed contact in section 1. Service use is also described in the <a href="terms.html">Terms of Service</a>.</p>
+        </section>
+      </article>
+    </div>
+  </main>
+  <footer><p>Silencium · Legal</p><nav aria-label="Footer navigation"><a href="privacy.html" aria-current="page">Privacy Policy</a><a href="terms.html">Terms of Service</a></nav></footer>
+</body>
+</html>
